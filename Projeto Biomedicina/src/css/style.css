@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    background-color: #f1f6fc31;
+}
+
+section, footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #0000009c;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 5 25%;
+    background-position: center;
+}
+
+.btn {
+    background-color: #3580db;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+.btn:hover {
+    background-color: #4f9cf9;
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #4f9cf9;
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+header {
+    background-image: url(/src/Imagens/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 250px;
+}
+
+nav {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding-top: 0px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not(.btn)::after {
+    content: "";
+    background-color: #3580db;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+/*menu mobile*/
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: none;
+    margin: 25px;
+    margin-top: 45px;
+}
+
+nav .close-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    padding-top: 85px;
+}
+
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0;
+}
+
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: #3580db;
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: white;
+    margin: 18px 0;
+}
+
+/* O que é */
+.o-que-e .container{
+    display: flex;
+    align-items: center;
+}
+
+.o-que-e .o-que-e-text{
+    width: 50%;
+    padding: 0 40px;
+}
+
+.o-que-e .o-que-e-text h3{
+    font-size: 40px;
+}
+
+.o-que-e .o-que-e-text p{
+    margin: 5px 0 10px 0;
+}
+
+.o-que-e .o-que-e-img{
+    width: 50%
+}
+
+.o-que-e .o-que-e-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+/* End O que é */
+
+/* Areas */
+.areas{
+    background-color: #d3e6fd;
+}
+.areas .container{
+    display: flex;
+    align-items: center;
+}
+
+.areas .areas-text{
+    width: 50%;
+    padding: 0 40px;
+}
+
+.areas .areas-text h3{
+    font-size: 40px;
+}
+
+.areas .areas-text p{
+    margin: 5px 0 10px 0;
+}
+
+.areas .areas-img{
+    width: 50%;
+}
+
+.areas .areas-img img{
+    width: 100%;
+    border-radius: 5%;
+}
+/* End Areas*/
+
+/* Onde Estudar */
+.onde-estudar .container{
+    display: flex;
+    align-items: center;
+}
+
+.onde-estudar .onde-estudar-text{
+    width: 50%;
+    padding: 0 40px;
+}
+
+.onde-estudar .onde-estudar-text h3{
+    font-size: 40px;
+}
+
+.onde-estudar .onde-estudar-text p{
+    margin: 5px 0 10px 0;
+}
+
+.onde-estudar .onde-estudar-img{
+    width: 50%;
+}
+
+.onde-estudar .onde-estudar-img img{
+    width: 100%;
+    border-radius: 5%;
+}
+/* End Onde Estudar */
+
+.footer {
+    background-color: #4f9cf9;
+    text-align: center;
+}
+
+.footer i {
+    color: #4f9cf9;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+    color: white;
+}
+
+@media (max-width: 830px) {
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #184b88;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+
+    .ul.open {
+        clip-path: circle(141.4% at 100% 0);
+    }
+
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon{
+        display: block;
+        top: 46px;
+        right: 28px;
+    }
+
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+    /* Página responsiva */
+
+    /* O que é */
+    .o-que-e .o-que-e-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .o-que-e .container {
+        flex-direction: column;
+    }
+
+    .o-que-e .o-que-e-text h3 {
+        font-size: 38px;
+    }
+
+    .o-que-e .o-que-e-text,
+    .o-que-e .o-que-e-img {
+        width: 90%;
+    }
+    /* End O que é */
+
+    /* Areas */
+    .areas .areas-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .areas .container {
+        flex-direction: column;
+    }
+
+    .areas .areas-text h3 {
+        font-size: 38px;
+    }
+
+    .areas .areas-text,
+    .areas .areas-img {
+        width: 90%;
+    }
+    /* End Areas */
+
+    /* Onde Estudar */
+    .onde-estudar .onde-estudar-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .onde-estudar .container {
+        flex-direction: column;
+    }
+
+    .onde-estudar .onde-estudar-text h3 {
+        font-size: 38px;
+    }
+
+    .onde-estudar .onde-estudar-text,
+    .onde-estudar .onde-estudar-img {
+        width: 90%;
+    }
+
+    /* End Onde Estudar */
+
+    /* Banner responsivo */
+    .banner .banner-text {
+        padding: 0;
+        margin: 80px;
+    }
+
+    .banner .banner-text h1 {
+        font-size: 65px;
+    }
+
+    .banner .banner-text p {
+        font-size: 17px;
+    }
+    /* End banner responsivo */
+
+    /* End página responsiva */
+}
