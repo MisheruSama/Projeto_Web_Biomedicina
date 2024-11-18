@@ -60,7 +60,6 @@ p {
 }
 
 header {
-    background-image: url(/src/Imagens/Background.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
